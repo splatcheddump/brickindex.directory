@@ -1,39 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,ROND@6..144,1..1000,83&display=swap');
 
 :root {
-    --bg-color: #f2f2f2;
-    --text-color: #393939;
-    --card-bg: white;
-    --card-border: #d6d6d6;
-    --card-hover-shadow: rgba(0,0,0,0.1);
-    --secondary-text: #666;
-    --muted-text: #999;
-    --hero-bg: url('../images/roblox_bg.jpg');
-    --icon-filter: none;
-    --footer-bg: #111;
-    --footer-opacity: 0.4;
-    --btn-bg: #0693e5;
-    --btn-hover: #0078bd;
-}
-
-[data-theme="dark"] {
     --bg-color: #1a1a1a;
-    --text-color: #f2f2f2;
-    --card-bg: #2a2a2a;
+    --text-color: #e7e7e7;
+    --card-bg: #141414;
     --card-border: #444;
     --card-hover-shadow: rgba(0,0,0,0.3);
     --secondary-text: #ccc;
     --muted-text: #888;
-    --hero-bg: url('../images/roblox_dark_bg.png');
+    --hero-bg: url('../images/robloxskybg.png');
     --icon-filter: invert(1);
     --footer-bg: #000;
     --footer-opacity: 0.2;
     --btn-bg: #444;
     --btn-hover: #555;
+
+    --card-bg-rainbowy: #0e0b0b;
 }
 
 body {
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-family: 'Google Sans Flex', Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -90,6 +76,7 @@ a:hover {
     position: relative;
     color: white;
     transition: .5s background-image;
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
 }
 
 .heroSection::after {
@@ -99,7 +86,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -108,23 +95,18 @@ a:hover {
     z-index: 2;
     text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .heroLogo {
-    max-width: 400px;
+    max-width: 100px;
     margin-bottom: 20px;
 }
 
 .heroTagline {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 5px 20px;
-    font-size: 24px;
-    font-weight: 300;
-    border-radius: 3px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: xxx-large;
+    font-weight: bold;
 }
 
 /* Controls / Search */
@@ -214,8 +196,28 @@ a:hover {
     display: flex;
     flex: 0 0 30%;
     margin: 1em auto;
+    width: 100%;
     max-width: 100%;
     border-radius: 3px;
+
+    /* background: var(--card-bg); */
+    padding: 1.5rem;
+
+    background: oklch(from var(--card-bg-rainbowy) l c calc(h + sibling-index() * 25));
+    position: relative;
+    transition: .25s box-shadow;
+
+    &:hover {
+        box-shadow: 0 4px 12px var(--card-hover-shadow);
+    }
+}
+
+.listItemLink {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    border-bottom: unset;
 }
 
 .iconContainer {
@@ -257,26 +259,21 @@ a:hover {
     flex: 1;
 }
 
+.listItem .url {
+    font-size: small;
+    opacity: 0.7;
+}
+
 .listItem h2 {
-    font-weight: 400;
-    margin: 0 0 10px 0;
+    font-weight: 500;
+    margin: 0;
     font-size: 1.25rem;
-}
-
-.listItem h2 a {
-    color: var(--text-color);
-    border-bottom: 1px dotted transparent;
-}
-
-.listItem h2 a:hover {
-    border-bottom: 1px dotted currentColor;
-    text-decoration: none;
 }
 
 .description {
     font-size: 0.9em;
     line-height: 1.5;
-    margin: 0;
+    margin: 20px 0 0 0;
     color: var(--secondary-text);
 }
 
@@ -314,26 +311,6 @@ a:hover {
     width: 38em;
 }
 
-.footerTitle {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-
-.footerTitle .title {
-    font-size: 2.5em;
-    font-weight: 300;
-}
-
-.tombstoneIcon {
-    margin-right: 10px;
-}
-
-[data-theme="dark"] .tombstoneIcon {
-    filter: invert(1);
-}
-
 .copyNotice {
     font-size: 0.75em;
     margin: 30px 0 20px 0;
@@ -354,9 +331,6 @@ a:hover {
 
 .socialImage {
     opacity: 0.8;
-}
-
-[data-theme="dark"] .socialImage {
     filter: invert(1);
 }
 
