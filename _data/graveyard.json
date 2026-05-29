@@ -192,6 +192,12 @@
     "type": "official"
   },
   {
+    "name": "Grow a Garden Wiki",
+    "link": "https://growagarden.miraheze.org",
+    "description": "",
+    "type": "community"
+  },
+  {
     "name": "Guts & Blackpowder Official Wiki",
     "link": "https://gbp.miraheze.org",
     "description": "",
@@ -264,12 +270,6 @@
     "type": "official"
   },
   {
-    "name": "Noob Team Zone Wiki",
-    "link": "https://ntz.miraheze.org/",
-    "description": "",
-    "type": "official"
-  },
-  {
     "name": "Nullscape",
     "link": "https://nullscape.miraheze.org",
     "description": "",
@@ -325,13 +325,19 @@
   },
   {
     "name": "Project Remix Wiki",
-    "link": "https://projectremixroblox.miraheze.org/",
+    "link": "https://projectremix.miraheze.org/",
     "description": "",
     "type": "official"
   },
   {
     "name": "Project Somnia Wiki",
     "link": "https://projectsomnia.miraheze.org/",
+    "description": "",
+    "type": "official"
+  },
+  {
+    "name": "Pwnslop Wiki",
+    "link": "https://pwnslop.miraheze.org/",
     "description": "",
     "type": "official"
   },
@@ -490,6 +496,12 @@
     "link": "https://tagging.wiki",
     "description": "",
     "type": "official"
+  },
+  {
+    "name": "Payload Wiki",
+    "link": "https://payload.miraheze.org",
+    "description": "",
+    "type": "community"
   },
   {
     "name": "Voxlblade",
